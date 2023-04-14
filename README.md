@@ -1,11 +1,15 @@
 ### Web-Penetration-Testing-Algorithm-
 # Algorithm showing the order in which information is mined for web pages
 
+---
+
 ## Tools we are using here
 - NMAP
 - GoBuster
 - Responder
 - Hydra
+
+---
 
 ## General (enumeration)
 
@@ -32,7 +36,9 @@ graph TD;
     %% ----------------------------- GOBUSTER -----------------------------
     
     gobuster --> gobuster_hint[Look for some interesting dirs]
-    gobuster_hint ---> exploit
+    gobuster_hint --> curl_check[Check your permission to see the website]
+    curl_check --> curl_cmd[/"curl -I &lt;URL&gt;"/]
+    curl_cmd --> exploit
     
     
     
