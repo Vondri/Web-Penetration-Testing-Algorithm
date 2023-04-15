@@ -27,7 +27,7 @@ graph TD;
     
     rpcbind --> rpcbind_showmount[/showmount -e <IP>/]
     rpcbind_showmount --> rpc_bind_showmount_if{If there are some files}
-    rpc_bind_showmount_if --> rpc_bind_showmount_if_yes[/"sudo mount #45;t &lt;IP&gt;:&lt;PATH&gt; #47;mnt"/]
+    rpc_bind_showmount_if -- YES --> rpc_bind_showmount_if_yes[/"sudo mount #45;t &lt;IP&gt;:&lt;PATH&gt; #47;mnt"/]
     rpc_bind_showmount_if_yes ---> exploit
     
     nmap_other --> nmap_other_hint[Looks for cve or some exploit using searchsploit. Try to use deafault login and passwords. Ultimately use Hydra]
