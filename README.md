@@ -25,7 +25,7 @@ graph TD;
     ftp --> ftp_anon[FTP ANONYMOUS LOGIN]
     ftp_anon ---> exploit[Exploiting]
     
-    rpcbind --> rpcbind_showmount[/showmount -e <IP>/]
+    rpcbind --> rpcbind_showmount[/"showmount -e &lt;IP&gt;"/]
     rpcbind_showmount --> rpc_bind_showmount_if{If there are some files}
     rpc_bind_showmount_if -- YES --> rpc_bind_showmount_if_yes[/"sudo mount #45;t &lt;IP&gt;:&lt;PATH&gt; #47;mnt"/]
     rpc_bind_showmount_if_yes ---> exploit
