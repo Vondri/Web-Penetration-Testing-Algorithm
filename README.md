@@ -21,7 +21,8 @@ graph TD;
     
     nmap --> host[/"Host -t A &lt;URL&gt;"/] 
     host --> nmap_cmd[/"sudo nmap -sV -sC -Pn -O -p- &lt;IP&gt;"/]
-    nmap_cmd --> ftp[FTP] & rpcbind[RPC BIND] & nmap_other[Other ports]
+    nmap_cmd --> ftp[FTP] & rpcbind[RPC BIND] & nmap_other[Other ports] & http["HTTP or HTTPS"]
+    http --> gobuster
     ftp --> ftp_anon[FTP ANONYMOUS LOGIN]
     ftp_anon ---> exploit[Exploiting]
     
