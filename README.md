@@ -46,8 +46,11 @@ graph TD;
     click gobuster href "https://github.com/OJ/gobuster" _blank
     click nmap_other_hint href "https://github.com/vanhauser-thc/thc-hydra" _blank
 ```
+
 ---
+
 ##TO DO
+
 -[ ] Checking what's webiste engine is running on
 -[ ] XSS,CSRF,SQLi etc.
 -[ ] Priviledge Escalation
