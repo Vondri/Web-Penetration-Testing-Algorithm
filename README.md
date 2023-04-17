@@ -55,3 +55,4 @@ graph TD;
 - [ ] Checking what's webiste engine is running on
 - [ ] XSS,CSRF,SQLi etc.
 - [ ] Priviledge Escalation
+- [ ] if /opt/ is empty and sudo -l not work check for doas
